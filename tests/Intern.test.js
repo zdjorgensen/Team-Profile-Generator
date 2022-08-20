@@ -17,7 +17,7 @@ describe("Intern", () => {
         it('should throw an error if not provided a name', () => {
             const cb = () => new Intern(1, 'z.d.jorgensen@gmail.com', 'UofU');
 
-            const err = new Error("Expected parameter 'name'");
+            const err = new Error("Expected parameter 'name' to be a non-empty string");
 
             expect(cb).toThrowError(err);
         });
@@ -26,7 +26,7 @@ describe("Intern", () => {
         it('should throw an error if not provided an id', () => {
             const cb = () => new Intern('Zach', 'z.d.jorgensen@gmail.com', 'UofU');
 
-            const err = new Error("Expected parameter 'id'");
+            const err = new Error("Expected parameter 'id' to be a number");
 
             expect(cb).toThrowError(err);
         });
@@ -35,7 +35,7 @@ describe("Intern", () => {
         it('should throw an error if not provided an email', () => {
             const cb = () => new Intern('Zach', 1, 'UofU');
 
-            const err = new Error("Expected parameter 'email'");
+            const err = new Error("Expected parameter 'email' to be a non-empty string with an '@' character");
 
             expect(cb).toThrowError(err);
         });
@@ -44,7 +44,7 @@ describe("Intern", () => {
         it('should throw an error if not provided a school', () => {
             const cb = () => new Intern('Zach', 1, 'z.d.jorgensen@gmail.com');
 
-            const err = new Error("Expected parameter 'school'");
+            const err = new Error("Expected parameter 'school' to be a non-empty string");
 
             expect(cb).toThrowError(err);
         });
