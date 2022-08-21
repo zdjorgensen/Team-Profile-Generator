@@ -1,0 +1,40 @@
+
+            <div class="card col-lg-4" id="cardStyle"> 
+                <div id=cardHead> 
+                    <h2> Zach </h2>
+                    <h3> Manager </h3>
+                </div>
+                <hr>
+                <h5> ID: 1 </h5>
+                <hr>
+                <h5> Email: <a href='mailto:z.d.jorgensen@gmail.com'>z.d.jorgensen@gmail.com</a> </h5>
+                <hr>
+                <h5> Office Number: 1 </h5>
+            </div>
+            
+            <div class="card col-lg-4" id="cardStyle"> 
+                <div id=cardHead> 
+                    <h2> Samantha </h2>
+                    <h3> Engineer </h3>
+                </div>
+                <hr>
+                <h5> ID: 2 </h5>
+                <hr>
+                <h5> Email: <a href='mailto:testemail@email.com'>testemail@email.com</a> </h5>
+                <hr>
+                <h5> GitHub: <a href="https://github.com/zdjorgensen" target="blank"> zdjorgensen </a></h5>
+            </div>
+            
+            <div class="card col-lg-4" id="cardStyle"> 
+                <div id=cardHead> 
+                    <h2> Jacob </h2>
+                    <h3> Intern </h3>
+                </div>
+                <hr>
+                <h5> ID: 3 </h5>
+                <hr>
+                <h5> Email: <a href='mailto:jacob@email.com'>jacob@email.com</a> </h5>
+                <hr>
+                <h5> School: University of Utah </h5>
+            </div>
+            
