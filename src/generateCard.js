@@ -1,4 +1,4 @@
-// const jscard = $('#jscard');
+const jscard = $('#jscard');
 
 
 function generateCard(data) {
@@ -23,3 +23,5 @@ function generateCard(data) {
     jscard.append(card);
 
 }
+
+module.exports = generateCard;

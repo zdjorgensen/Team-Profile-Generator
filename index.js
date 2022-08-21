@@ -5,7 +5,7 @@ const Manager = require('./lib/Manager');
 const inquirer = require('inquirer');
 const fs = require ('fs');
 // const generateHTML = require('./dist/generate.html');
-const generateCard = require('./src/generateCard.js');
+// const generateCard = require('./src/generateCard');
 
 function appendToFile(filename, data) {
     fs.appendFile(filename, `${data}`, (err) => {
@@ -21,7 +21,7 @@ function init() {
             name: 'managerName',
         },
         {
-            type: 'input',
+            type: 'number',
             message: "Enter team manager's ID",
             name: 'managerID',
         },
@@ -31,12 +31,13 @@ function init() {
             name: 'managerEmail',
         },
         {
-            type: 'input',
+            type: 'number',
             message: "Enter team manager's office number",
             name: 'managerOfficeNum',
         },
     ]).then(data => {
-        appendToFile("./dist/generate.html", generateCard(data));
+        manager = new Manager(data.managerName, data.managerID, data.managerEmail, data.managerOfficeNum);
+        console.log(manager);
     });
 };
 
