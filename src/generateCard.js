@@ -1,8 +1,7 @@
-const fs = require ('fs');
+const fs = require('fs');
 
 function generateCard(data) {
-    console.log(data, data.getRole());
-    if(data.getRole() === "Manager") {
+    if (data.getRole() === "Manager") {
         let card = `
             <div class="card col-lg-4" id="cardStyle"> 
                 <div id=cardHead> 
@@ -17,10 +16,10 @@ function generateCard(data) {
                 <h5> Office Number: ${data.officeNum} </h5>
             </div>
             `
-            appendToFile('./src/cardInfo.txt', card);
+        appendToFile('./src/cardInfo.txt', card);
     }
-    
-    if(data.getRole() === "Engineer") {
+
+    if (data.getRole() === "Engineer") {
         let card = `
             <div class="card col-lg-4" id="cardStyle"> 
                 <div id=cardHead> 
@@ -35,10 +34,10 @@ function generateCard(data) {
                 <h5> GitHub: <a href="https://github.com/${data.getGitHub()}" target="blank"> ${data.getGitHub()} </a></h5>
             </div>
             `
-            appendToFile('./src/cardInfo.txt', card);
-    } 
+        appendToFile('./src/cardInfo.txt', card);
+    }
 
-    if(data.getRole() === "Intern") {
+    if (data.getRole() === "Intern") {
         let card = `
             <div class="card col-lg-4" id="cardStyle"> 
                 <div id=cardHead> 
@@ -53,12 +52,12 @@ function generateCard(data) {
                 <h5> School: ${data.gitSchool()} </h5>
             </div>
             `
-            appendToFile('./src/cardInfo.txt', card);
+        appendToFile('./src/cardInfo.txt', card);
     }
 }
 
 function appendToFile(filename, card) {
-    fs.appendFileSync(filename,  `${card}`, (err) => {
+    fs.appendFileSync(filename, `${card}`, (err) => {
         if (err) throw err;
     })
 }
